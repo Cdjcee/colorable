@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+   
+    <link rel="apple-touch-icon" href="icons/icon-96x96.svg">
+    <meta name="apple-mobile-web-app-status-bar" content="black">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="black">
+    <title>RoLoc Colors Tools</title>
+</head>
+<body>
+    
+<h5><div class="topInfo">&nbsp;<span id="hslaName"></span></div></h5>
+<section class = "section">
+    <! -- HSL TOOL  ________________________________________________ --> 
+    <fieldset><legend id = "colorPicker">
+        <img src="icons/expand_more.png" alt="" id="imgColorPicker" width="30" height="30">
+        Color picker 
+    </legend>
+<br>
+    <div class ="sizeContainer">
+     <div class ="rangeContainer">
+
+          <div class="rangeButton"></div></div>
+      <div class ="rangeSaturation">
+        <div class="satButton"></div>
+        </div>
+        <div class="rangeLuminosity">
+            <div class="lumButton"></div>
+        </div>
+        <div class="rangeAlpha">
+            <div class="alpButton"></div>
+
+        </div>
+        </div>
+    </fieldset>
+    <! -- HSL OPTIONS  ________________________________________________  --> 
+        <fieldset><legend id = "colorOptions">
+            <img src="icons/expand_more.png" alt="" id="imgColorOptions"  width="30" height="30">
+            Color transform</legend>
+       <br> <div class="options">
+            
+            <button class="invertHSL" type="button">Complementary</button>
+    <button class="onlyH" type="button">Invert H</button>
+    <button class="onlyS" type="button">Invert S</button>
+    <button class="onlyL" type="button">Invert L</button>
+    <button class="sameGray" type="button">Same gray Level</button>
+    <button class="pureColor" type="button">Pure color</button>
+    <button class="medium_LS" type="button">Medium L&S</button>
+    <button class="medium_alpha" type="button">Transparence</button>
+    <button class="alphaNone" type="button">Transparence none</button>
+    <button class="medium_Gray" type="button">Medium gray</button>
+    <button class="white" type="button">White</button>
+    <button class="black" type="button">Black</button>
+    <button class="lambda" type="button">Lambda</button>
+  
+    </div>
+        </div>
+    </fieldset>
+    <! -- HSL Pallet ___________________________________________  --> 
+    <fieldset><legend id = "pallet">
+        <img src="icons/expand_more.png" alt="" id="imgPallet"  width="30" height="30">
+        Colors Palette</legend>
+   <br>
+     <div class="palletTool">
+        <img src="icons/delete.png" class="deletePallet deleteBox" title="Delete" alt="delete button" width="20" height="20">
+        <img src="icons/export.png" class="exportPalletIcon deleteBox" title="export" alt="export button" width="20" height="20">
+      <br>
+         <table class="exportTool visibility">
+     <tr><td> <textarea rows="3" cols="28" class="exportPallet" ></textarea></td>
+      <td><button id="exportPalletBtn" class="">copy</button></td></tr>
+         </table>  
+    
+    </div>
+    <div class="historyContainer" >  </div></fieldset>
+    <! -- HSL Chords   _________________________________________ --> 
+
+    
+    <fieldset><legend id = "chords">
+        <img src="icons/expand_more.png" alt="" id="imgChords"  width="30" height="30">
+        Palette of Range </legend>
+  <br> 
+<div class="slideContainerChords">
+ 
+    <div class="Chords chordsContainerTool" >
+        <table style="vertical-align: text-top;">
+            <tr><td><h5>Number of colors</h5></td>
+                <td><input id="chordsNumber"  type="range" min="2" max="36" value="2" step="1" style="width:100px"></td>
+                <td class="chordsNumberX">2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><h5>Degres of similarity</h5></td>
+                <td><input id="limitOfAngle" type="range" value="30" min="1" max="30" style="width:100px" > </td>
+                <td class="limitNumberX"> 30°</td>
+                
+            </tr>
+        </table>  
+
+        <table>
+        <tr>    
+            <td><button id="invertHueX" value="-1" style ="width:30px"> << </button>
+                <button id="chordsBtn">By similarity </button>
+                <button id="invertHueY" value="1" style ="width:30px"> >> </button>
+            </td>
+            <td>&nbsp;<button id="chordsBtnSym" class="">By symmetry</button>
+            </td>
+        </tr>
+        <tr> 
+            <td> 
+                 <img src="icons/delete.png" class="deleteChords deleteBox" alt="delete" width="20" height="20">  
+            </td>
+        </tr>
+    </table>  
+    
+        
+    </div>
+</div>
+<div class="chordsContainer"></div></fieldset>
+
+<! -- HSL Gradients   _________________________________________ --> 
+
+    <fieldset><legend id = "gradient">
+        <img src="icons/expand_more.png" alt="" id="imgGradient"  width="30" height="30">
+        Gradients nuancer </legend>
+   <br>
+    <div class="gradient gradientContainerTool" >
+        <button id="gradientBtn" class="">Opacity</button>
+        <button id="gradientBtnLigth" class="">Ligth</button>
+         <div class="slideContainer">
+<label><h5>Multiplicator</h5><div class="gradientNumberX">6</div>
+</label>
+         <input id="gradientNumber" value="6" type="range" min="1" max="50" step="1"  >
+         </div>
+<img src="icons/delete.png" class="deleteGradient deleteBox" alt="delete" width="20" height="20">
+
+     </div>
+<div class="gradientContainer"></div></fieldset>
+</section>
+
+<! -- COLORABLE CONTAINERS & texts   _________________________________________ --> 
+<section class="sectionC">
+    <fieldset><legend id = "charter">
+        <img src="icons/expand_more.png" alt="" id="imgCharter"  width="30" height="30">
+        Graphical charter Editor </legend>
+   
+<div class="charterContainer"><br>
+    <form action="" class="formOp"> 
+<h5> <u>Change:</u> <br><label> Boxes 
+   <input class="colorableOption" type="radio" name="colorableOption" value="box" checked></label>
+   <label> | Container 
+    <input class="colorableOption" type="radio" name="colorableOption" value="container"></label>
+   <label> | Texts
+    <input class="colorableOption" type="radio" name="colorableOption" value="text"></label>
+</h5>  
+    </form>    <br>
+    <img src="icons/delete.png" class="deleteCharter deleteBox" alt="delete" width="20" height="20">
+
+    <div class="container">
+        <p class="textBox">Colorable container </p>
+   
+        <div class="box"><h4 class="textBox">Click in to colorate </h4></div>
+        <div class="box"><h1 ><b class="textBox"> Web design style</b></h1></div>
+        <div class="box"><h2 class="textBox">Selected Color</h2></div>
+        <div class="box"><h3 ><I class="textBox">"Lorem ipsum dolor sit amet,exercitationem. Dolorem similiq ue praesentium ptatibus recusandae, voluptate perspiciatis eligendi ducimus amet nisi! Ut?"</I></h3></div>  
+        <div class="box"><h4 class="textBox">Lorem ipsum dolor sit amet, <u class="textBox">luptatibus recusandae</u>, voluptate perspiciatis eligendi ducimus amet nisi! Ut?</h4></div> 
+        <div class="box"><p class="textBox">Lorem ipsum dolor sit amet, luptatibus recusandae, voluptate perspiciatis eligendi ducimus amet nisi! Ut? exercitationem. Dolorem similiq ue praesentium ptatibus recusandae, voluptate perspiciatis eligendi ducimus ametexercitationem. Dolorem similiq ue praesentium ptatibus recusandae, voluptate perspiciatis eligendi ducimus amet</p>
+ <div class="lo"></div>
+
+        </div> 
+
+    </div>
+</div> 
+</fieldset>
+</section>
+<script src="app.js"></script>
+<script src="input.js"></script>
+<script src="output.js"></script>
+<script src="functions.js"></script>
+<script src="index.js"></script>
+</body>
+
+  
+
+
