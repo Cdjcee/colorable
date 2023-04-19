@@ -1,78 +1,5 @@
 
-//Color transform events ____________________________________
-invertHSL.addEventListener("click", () => {
-    invertH()
-    invertL()
-    printColor()
-    degradContainer()
- })
- onlyH.addEventListener("click", () => {
-     invertH()
-     printColor()
-     degradContainer()
- })
- onlyS.addEventListener("click", () => {
-    invertS()
-    printColor()
-    degradContainer()
-})
-onlyL.addEventListener("click", () => {
-    invertL()
-    printColor()
-    degradContainer()
-})
-mediumAlpha.addEventListener("click", () => {
-    medium_alpha()
-    printColor()
-    degradContainer()
-
-})
-alphaNone.addEventListener("click", () => {
-    alpha_none()
-    printColor()
-    degradContainer()
-
-})
-
-sameGray.addEventListener("click", () => {
-    sameGrayLevel()
-    printColor()
-    degradContainer()
-})
-pureColor.addEventListener("click", () => {
-    pureColorSaturation()
-    printColor()
-    degradContainer()
-})
-medium_LS.addEventListener("click", () => {
-    mediumLS()
-    printColor()
-    degradContainer()
-})
-medium_Gray.addEventListener("click", () => {
-    mediumGray()
-    printColor()
-    degradContainer()
-})
-black.addEventListener("click", () => {
-    _black()
-    printColor()
-    degradContainer()
-})
-white.addEventListener("click", () => {
-    _white()
-    printColor()
-    degradContainer()
-})
-lambda.addEventListener("click", () => {
-    _lambda()
-    printColor()
-    degradContainer()
-})
-
-
-
-///Chords Event
+///Chords Event///////////////////////////////////////
 chordsNumber.addEventListener("mousemove", () => {
     chordsNumberX.innerHTML=chordsNumber.value
     })
@@ -85,6 +12,13 @@ chordsNumber.addEventListener("mousemove", () => {
     limit.addEventListener("click", () => {
         limitNumberX.innerHTML=limit.value+"°"
     })
+///tactil screen chords
+chordsNumber.addEventListener("touchmove", () => {
+    chordsNumberX.innerHTML=chordsNumber.value
+})
+limit.addEventListener("touchmove", () => {
+    limitNumberX.innerHTML=limit.value+"°"
+})
 
     chordsBtn.addEventListener("click" , () =>{
     o=2
@@ -93,6 +27,7 @@ chordsNumber.addEventListener("mousemove", () => {
     rotation=rotation
   
         showChords(nbC,o,limitAngle)
+
     
     })
     hueRotationX.addEventListener("click" , () =>{
@@ -120,7 +55,7 @@ chordsNumber.addEventListener("mousemove", () => {
         showChords(nbC,o)
         })
 
-///Gradients Event
+///Gradients ///////////////////////////////////////////////
 gradientNumber.addEventListener("mousemove", () => {
 gradientNumberX.innerHTML=gradientNumber.value
 })
@@ -215,9 +150,8 @@ pallet.addEventListener("click", () =>{
     exportPalletBtn.addEventListener("click", () =>{
 
         exportPallet.select()
-        document.execCommand("copy")
 
-	return false
+
 
         }) 
 
@@ -313,5 +247,74 @@ rangeAlpha.addEventListener("click" , (e) => {
     degradContainer()
   
 }) 
+//Color transform events ____________________________________
+invertHSL.addEventListener("click", () => {
+    invertH()
+    invertL()
+    printColor()
+    degradContainer()
+ })
+ onlyH.addEventListener("click", () => {
+     invertH()
+     printColor()
+     degradContainer()
+ })
+ onlyS.addEventListener("click", () => {
+    invertS()
+    printColor()
+    degradContainer()
+})
+onlyL.addEventListener("click", () => {
+    invertL()
+    printColor()
+    degradContainer()
+})
+mediumAlpha.addEventListener("click", () => {
+    medium_alpha()
+    printColor()
+    degradContainer()
 
+})
+alphaNone.addEventListener("click", () => {
+    alpha_none()
+    printColor()
+    degradContainer()
+
+})
+
+sameGray.addEventListener("click", () => {
+    sameGrayLevel()
+    printColor()
+    degradContainer()
+})
+pureColor.addEventListener("click", () => {
+    pureColorSaturation()
+    printColor()
+    degradContainer()
+})
+medium_LS.addEventListener("click", () => {
+    mediumLS()
+    printColor()
+    degradContainer()
+})
+medium_Gray.addEventListener("click", () => {
+    mediumGray()
+    printColor()
+    degradContainer()
+})
+black.addEventListener("click", () => {
+    _black()
+    printColor()
+    degradContainer()
+})
+white.addEventListener("click", () => {
+    _white()
+    printColor()
+    degradContainer()
+})
+lambda.addEventListener("click", () => {
+    _lambda()
+    printColor()
+    degradContainer()
+})
 
