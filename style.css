@@ -14,7 +14,14 @@
     vertical-align: top;
     
      }
-
+.topInfo{
+  height: 40px;
+  
+}
+.colorSelected
+{
+  width: 100%;
+}
 .section{
   max-width: 100%;
 }
@@ -204,7 +211,7 @@ background: linear-gradient(to right,  hsl(0deg, 50%, 50%),
                                        hsl(360deg, 50%, 50%)
                                        );
 width: 100%;
-height: 24px;
+height: 30px;
 border-radius: 2px;
 box-shadow: 1px 1px 5px #444;
 cursor: crosshair;
@@ -216,7 +223,7 @@ cursor: crosshair;
  
   );
 width: 100%;
-height: 24px;
+height: 30px;
 border-radius: 2px;
 box-shadow: 1px 1px 5px #444;
 cursor: crosshair;
@@ -230,7 +237,7 @@ cursor: crosshair;
   hsl(0deg, 0%, 100%)
   );
 width: 100%;
-height: 24px;
+height: 30px;
 border-radius: 2px;
 box-shadow: 1px 1px 5px #444;
 cursor: crosshair;
@@ -244,7 +251,7 @@ cursor: crosshair;
   hsl(0deg, 50%, 100%)
   );
 width: 100%;
-height: 24px;
+height: 30px;
 border-radius: 2px;
 box-shadow: 1px 1px 5px #444;
 cursor: crosshair;

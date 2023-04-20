@@ -2,7 +2,7 @@
 function printColor()
 {
     exportPallet.value += color+' + '
-    
+
     color = "hsla("+hueAngle+"deg, "+satur+"%, "+lumi+"%, "+alph+"%)"
     historyContainer.insertAdjacentHTML("beforeend",
     `<div class="historyNuancer" style ="background:${color}" 
@@ -10,7 +10,7 @@ function printColor()
     </div>`
     )
     hslaName.innerHTML = `<span class="textInfo">HSLA: ${hueAngle}deg ${satur}% ${lumi}% ${alph}%</span>
-    <span style ="background:${color}" "align=rigth"><span style="color:#FFF">##</span>##</span>`
+    <br><div style ="background:${color}" class="colorSelected"><span style="color:#FFF">##</span>##</div>`
 title_one.innerHTML = `HSLa: ${hueAngle}deg ${satur}% ${lumi}% ${alph}%`
 } 
 
@@ -170,7 +170,7 @@ function degradContainer(){
                 color = "hsla("+hueAngle+"deg, "+satur+"%, "+lumi+"%, "+alph+"%)"
                 title_one.innerHTML = `HSLa: ${hueAngle}deg ${satur}% ${lumi}% ${alph}%`
                 hslaName.innerHTML = `<span class="textInfo">HSLA: ${hueAngle}deg ${satur}% ${lumi}% ${alph}%</span>
-                <span style ="background:${color}" "align=rigth"><span style="color:#FFF">##</span>##</span>`
+                <div style ="background:${color}" class="colorSelected"><span style="color:#FFF">##</span>##</div>`
             
             
             degradContainer()
