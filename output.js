@@ -12,7 +12,7 @@ chordsNumber.addEventListener("mousemove", () => {
     limit.addEventListener("click", () => {
         limitNumberX.innerHTML=limit.value+"°"
     })
-///tactil screen chords
+///tactil screen 
 chordsNumber.addEventListener("touchmove", () => {
     chordsNumberX.innerHTML=chordsNumber.value
 })
@@ -62,7 +62,10 @@ gradientNumberX.innerHTML=gradientNumber.value
 gradientNumber.addEventListener("click", () => {
     gradientNumberX.innerHTML=gradientNumber.value
     })
-    
+    //for tactil screen
+    gradientNumber.addEventListener("touchmove", () => {
+        gradientNumberX.innerHTML=gradientNumber.value
+        })
 gradientBtn.addEventListener("click" , () =>{
 o=1
 nb=gradientNumber.value
