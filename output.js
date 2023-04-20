@@ -62,6 +62,10 @@ gradientNumberX.innerHTML=gradientNumber.value
 gradientNumber.addEventListener("click", () => {
     gradientNumberX.innerHTML=gradientNumber.value
     })
+    ///tactil screens
+    gradientNumber.addEventListener("touchmove", () => {
+        gradientNumberX.innerHTML=gradientNumber.value
+        })
     
 gradientBtn.addEventListener("click" , () =>{
 o=1
