@@ -1,9 +1,9 @@
 //_Add Colors______________________________________________
 function printColor()
 {
+    exportPallet.value += color+' + '
+    
     color = "hsla("+hueAngle+"deg, "+satur+"%, "+lumi+"%, "+alph+"%)"
-    exportColors = color+' + '
-    exportPallet.value += exportColors
     historyContainer.insertAdjacentHTML("beforeend",
     `<div class="historyNuancer" style ="background:${color}" 
     id="${hueAngle},${satur},${lumi},${alph}">
