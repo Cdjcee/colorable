@@ -217,7 +217,14 @@ boxModel.forEach((box) => {
     degradContainer()
    
 })
-
+rangeContainer.addEventListener("touchmove" , (e) => {
+    
+    hueAngle = Math.round(e.offsetX/step360)
+    range.style.left = hueAngle*step360+"px"
+    printColor()
+    degradContainer()
+   
+})
 
 
 rangeSaturation.addEventListener("click" , (e) => {
